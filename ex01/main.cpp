@@ -6,7 +6,7 @@
 /*   By: leaugust <leaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 19:38:52 by leaugust          #+#    #+#             */
-/*   Updated: 2025/09/26 13:29:17 by leaugust         ###   ########.fr       */
+/*   Updated: 2025/09/26 15:36:12 by leaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int	main(void)
 	c.takeDamage(10);
 	c.attack("D");
 	c.beRepaired(5);
+	c.guardGate();
 	return (0);
 }

@@ -6,13 +6,14 @@
 /*   By: leaugust <leaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 19:38:52 by leaugust          #+#    #+#             */
-/*   Updated: 2025/09/26 15:42:29 by leaugust         ###   ########.fr       */
+/*   Updated: 2025/09/26 16:38:00 by leaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void)
 {
@@ -56,5 +57,21 @@ int	main(void)
 	e.attack("F");
 	e.beRepaired(5);
 	e.highFivesGuys();
+	
+	std::cout << "\nDiamondTrap\n" << std::endl;
+    DiamondTrap g("G");
+	g.attack("H");
+	g.takeDamage(5);
+	g.beRepaired(5);
+	for (int i = 0; i < 8; i++)
+		e.attack("H");
+	g.attack("H");
+	g.beRepaired(1);
+	g.takeDamage(10);
+	g.attack("H");
+	g.beRepaired(5);
+	g.guardGate();
+	g.highFivesGuys();
+	g.whoAmI();
 	return (0);
 }
