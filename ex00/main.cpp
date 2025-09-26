@@ -6,29 +6,25 @@
 /*   By: leaugust <leaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 19:38:52 by leaugust          #+#    #+#             */
-/*   Updated: 2025/09/26 00:02:29 by leaugust         ###   ########.fr       */
+/*   Updated: 2025/09/26 13:29:32 by leaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int main() {
-    ClapTrap leanne("Leanne");
-
-    leanne.attack("Julien");       
-    leanne.takeDamage(3);       
-    leanne.beRepaired(2);         
-
-    for (int i = 0; i < 11; i++)
-        leanne.attack("Julien");
-    leanne.takeDamage(20);        
-    leanne.attack("Julien");       
-    leanne.beRepaired(10);   
-
-    ClapTrap alexandre("Alexandre");
-    alexandre.beRepaired(5);      
-    alexandre.takeDamage(5);      
-    alexandre.attack("Julien");  
-
-    return 0;
+int	main(void)
+{
+    std::cout << "\nClapTrap\n" << std::endl;
+	ClapTrap a("A");
+	a.attack("B");
+	a.takeDamage(5);
+	a.beRepaired(5);
+	for (int i = 0; i < 8; i++)
+		a.attack("B");
+	a.attack("B");
+	a.beRepaired(1);
+	a.takeDamage(10);
+	a.attack("B");
+	a.beRepaired(5);
+	return (0);
 }

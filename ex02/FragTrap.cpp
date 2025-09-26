@@ -6,7 +6,7 @@
 /*   By: leaugust <leaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 23:43:09 by leaugust          #+#    #+#             */
-/*   Updated: 2025/09/25 23:59:31 by leaugust         ###   ########.fr       */
+/*   Updated: 2025/09/26 13:52:09 by leaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ FragTrap& FragTrap::operator=(const FragTrap &other) {
     if (this != &other) {
         ClapTrap::operator=(other);
     }
-    std::cout << "FragTrap " << _name << " assigned" << std::endl;
+    std::cout << "FragTrap " << _name << " assigned (operator=)" << std::endl;
     return *this;
 }
 
@@ -45,13 +45,11 @@ FragTrap::~FragTrap() {
 
 void FragTrap::attack(const std::string &target) {
     if (_hitPoints <= 0 || _energyPoints <= 0) {
-        std::cout << "FragTrap " << _name 
-                  << " can't attack (no more hit points or energy points left)" 
-                  << std::endl;
+        std::cout << "FragTrap " << _name << " can't attack ! No hit points or energy points left !" << std::endl;
         return;
     }
     _energyPoints--;
-    std::cout << "FragTrap " << _name << " hit " << target << ", causing " << _attackDamage << " points of damage !" << std::endl;
+    std::cout << "FragTrap " << _name << " hit " << target << ", causing " << _attackDamage << " points of damage, now has " << _energyPoints << " energy points left !" << std::endl;
 }
 
 void FragTrap::highFivesGuys() {
